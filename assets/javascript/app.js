@@ -15,23 +15,18 @@
 
 	  //timer code
 		
-		var time = 30;
+		var time = 20;
 		var gameTimer = setInterval(function(){
 			time --;
-			//console.log(time);
-			//$('.trivia').html(time);
-			//$('time-remaining').html(time);
 			$('#time-remaining').html("Time remaining: " + "00:" + time + " secs");
 			if(time == 0){
-				//alert("time is up");
-
 				clearInterval(gameTimer);
-				$('#results').show();
-			}
-			
-
+				$('#results').show();				
+			}			
 
 		}, 1000)
+
+
 
 	  
 	});
@@ -104,7 +99,6 @@
 
 			// for each available answers to the question
 			for (letter in questions[i].answers) {
-				//console.log(questions)
 				//add html radio button
 				answers.push(
 					'<label>' 
@@ -129,15 +123,12 @@
 
 		$("input").on("click", function () {
 				var input = $(this)
-				//console.log(this.value)
 				userAnswers.push(this.value)
-				//console.log(userAnswers);
-			})
-		//console.log(quizInput.join(''));
-		
-	}
 
-	
+			})
+		
+		
+	}	
 
     $('#doneButton').on('click',function(){
 	  var done = $(this);
@@ -163,10 +154,10 @@
 				}
 	  		}
 
-	  		//console.log(correctCount);
 	  		$('#correct').append(correctCount++);
-	  		//console.log(incorrectCount);
 	  		$('#incorrect').append(incorrectCount++);
+
+
 	  
 	});
 
