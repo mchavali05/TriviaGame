@@ -7,13 +7,29 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
-
-	<div>
+	<div class="trivia">
 		<h1>Totally Trivial Trivia!</h1>
 		<br>
 		<br>
-		<button>Start</button>
+
+		<button id="button">Start</button>
+		<br>
 	</div>
+	<div class="start">
+		
+		<p><span id="time-remaining"></span></p>
+		
+	</div>
+
+	<div id="quiz"></div>
+	<button id="doneButton">Done</button>
+	<div id="done"></div>
+	<div id="results">
+		<div>All Done!</div>
+		<div id="correct">Correct Answers: </div>	
+		<div id="incorrect">Incorrect Answers: </div>
+	</div>
+	
 
 	<script type="text/javascript" src="assets/javascript/app.js"></script>
 
